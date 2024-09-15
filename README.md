@@ -1,7 +1,10 @@
-# Data Engineering Mini Project One - Leonard Eshun
+[![Format](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/format.yml)
+[![Test](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/test.yml)
+[![Lint](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/lint.yml)
+[![Install](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Individual_Project_One/actions/workflows/install.yml)
 
-[![CI](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_One/actions/workflows/workflow.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_One/actions/workflows/workflow.yml)
 
+## Data Engineering Individual Project One - Continuous Integration using Github Actions of Python Data Science
 
 This repository is created as an assignment from the Data Engineering course, IDS 706. The aim is to create a python project template that contains functioning placeholders for key python project best-practice elements.
 
