@@ -74,7 +74,10 @@ The code was pushed to Github and Github Actions did the following main things:
 1. All python files were formated by black
 1. Code linting was done with ruf
 1. All the tests in the test_main.py were executed
-1. Finally, a markdown file summarizing the information was created during the pipeline runtime using Python. Prior to this the charts were generated in the pipeline runtime and used for visualization together with the descriptive statistics in the generated md file.
+
 
 > [!IMPORTANT]
-> All the above steps had to be successful to get a completed CI/CD.
+> A markdown file summarizing the information is created during the pipeline runtime using Python. Prior to this the charts are generated in the pipeline runtime and used for visualization together with the descriptive statistics in the generated md file. This is part of the test workflow and occurs as the last job. A push is made by the github action for generation of the files.
+
+## Descriptive Statistics and Visualization
+The descriptive statistics were done with Pandas and the Visualization done with matplotlib.
