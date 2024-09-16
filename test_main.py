@@ -1,8 +1,8 @@
 from mylib.lib import load_dataset, calculate_summaries
 
 
-def test_data_loading(dataset):
-    """Tewting the add function"""
+def test_data_loading():
+    """Testing data loading"""
     dataset = load_dataset()
     assert dataset is not None
     assert dataset.shape == (73280, 8)
