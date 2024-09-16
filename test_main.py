@@ -1,13 +1,15 @@
 from mylib.lib import load_dataset, calculate_summaries
 
 
-def test_add(dataset):
+def test_data_loading(dataset):
     """Tewting the add function"""
+    dataset = load_dataset()
     assert dataset is not None
     assert dataset.shape == (73280, 8)
 
 
-def test_countries(dataset):
+def test_summaries():
+    dataset = load_dataset()
     my_calculated_summaries = calculate_summaries(
         dataset, "population", "Population", "urbanindex", "Urban Index", True
     )
@@ -31,7 +33,6 @@ def test_countries(dataset):
 
 
 if __name__ == "__main__":
-    dataset = load_dataset()
-    test_add(dataset)
-    test_countries(dataset)
+    test_data_loading()
+    test_summaries()
     print("Test completed successfully")
