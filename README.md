@@ -64,6 +64,8 @@ It has the following functions:
 > [!TIP]
 > Just clone the repository to your local machine or codespace and enjoy.
 
+## Descriptive Statistics and Visualization
+The descriptive statistics were done with Pandas and the Visualization done with matplotlib.
 
 
 ## Steps taken to meet the requirements
@@ -79,6 +81,3 @@ The code was pushed to Github and Github Actions did the following main things:
 
 > [!NOTE]
 > A markdown file summarizing the information is created during the pipeline runtime using Python. Prior to this the charts are generated in the pipeline runtime and used for visualization together with the descriptive statistics in the generated md file. This is part of the test workflow and occurs as the last job. A push is made by the github action for generation of the files.
-
-## Descriptive Statistics and Visualization
-The descriptive statistics were done with Pandas and the Visualization done with matplotlib.

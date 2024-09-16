@@ -9,14 +9,18 @@ from mylib.lib import (
 # saving markdown
 def save_to_markdown(data):
     with open("population_summary.md", "w") as file:
-        file.write("Population Summaries:\n")
+        file.write("# Population Summaries\n")
         file.write(
             calculate_summaries(
                 data, "population", "Population", "urbanindex", "Urban Index"
             ).to_markdown()
         )
         file.write("\n\n")
+        file.write("# Population Histogram")
+        file.write("\n\n")
         file.write("![population_histogram](population_histogram.png)")
+        file.write("\n\n")
+        file.write("# Population Bar Chart")
         file.write("\n\n")
         file.write("![population_bar](population_bar.png)")
 

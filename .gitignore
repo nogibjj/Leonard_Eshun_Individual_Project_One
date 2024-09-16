@@ -6,3 +6,4 @@ actions
 population_summary.md
 population_bar.png
 population_histogram.png
+.ruff_cache
