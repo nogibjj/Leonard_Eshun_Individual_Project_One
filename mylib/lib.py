@@ -44,7 +44,6 @@ def calculate_summaries(
 
 # Data Visualization
 def create_bar_chart(data: pd.DataFrame, save_chart: bool):
-    # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html
     population_sums = data.groupby(["state"])["population"].sum()
     population_sums.plot(kind="bar")
     plt.title("Populations for U.S. states")
