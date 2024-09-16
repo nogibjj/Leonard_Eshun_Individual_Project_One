@@ -28,4 +28,4 @@ generate_and_push:
 	git push; \
 
 
-all: install format lint test
+all: install format lint test container-lint refactor generate_and_push
