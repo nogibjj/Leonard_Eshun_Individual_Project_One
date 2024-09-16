@@ -1,23 +1,23 @@
-import json
+from mylib.lib import *
 
 
-def add(a, b):
-    return a + b
-
-
-def get_the_capital_of_a_country(country: str) -> str:
-    capital = ""
-    # Open and read the JSON file
-    with open(file="country_capital.json", mode="r", encoding="utf-8") as file:
-        data = json.load(file)
-        capital = (
-            data[country.lower()]
-            if data.get(country.lower(), "") != ""
-            else "The country you specified was not found!"
+# saving markdown
+def save_to_markdown(data):
+    with open("population_summary.md", "w") as file:
+        file.write("Population Summaries:\n")
+        file.write(
+            calculate_summaries(
+                data, "population", "Population", "urbanindex", "Urban Index"
+            ).to_markdown()
         )
-    return capital
+        file.write("\n\n")
+        file.write("![population_histogram](population_histogram.png)")
+        file.write("\n\n")
+        file.write("![population_bar](population_bar.png)")
 
 
 if __name__ == "__main__":
-    print(add(1, 2))
-    print(get_the_capital_of_a_country("Ghana"))
+    df = load_dataset()
+    create_histogram(df, "population", "Population across areas in the U.S.", True)
+    create_bar_chart(df, True)
+    save_to_markdown(df)

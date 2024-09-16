@@ -1,5 +1,5 @@
 __pycache__/
-.venv
+mylib/__pycache__/
 actions
 .pytest_cache
 .DS_Store
