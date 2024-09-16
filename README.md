@@ -72,12 +72,12 @@ The code was pushed to Github and Github Actions did the following main things:
 1. Setup the virtual environment according to the parameters in the workflow.yml
 1. Packages were installed, including those in the requirements.txt file
 1. All python files were formated by black
-1. Code linting was done with ruf. The `make lint` command gave this output:
-![make_lint]("assets/make_lint.png")
-1. All the tests in the test_main.py were executed. The `make test` command gave this output:
-![Make Test]("assets/make_test.png")
+1. Code linting was done with ruf. The `make lint` command gave this output:  
+![Make Lint](assets/make_lint.png)
+1. All the tests in the test_main.py were executed. The `make test` command gave this output:  
+![Make Test](assets/make_test.png)
 
-> [!IMPORTANT]
+> [!NOTE]
 > A markdown file summarizing the information is created during the pipeline runtime using Python. Prior to this the charts are generated in the pipeline runtime and used for visualization together with the descriptive statistics in the generated md file. This is part of the test workflow and occurs as the last job. A push is made by the github action for generation of the files.
 
 ## Descriptive Statistics and Visualization
