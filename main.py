@@ -1,4 +1,9 @@
-from mylib.lib import *
+from mylib.lib import (
+    load_dataset,
+    calculate_summaries,
+    create_bar_chart,
+    create_histogram,
+)
 
 
 # saving markdown

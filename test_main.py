@@ -1,25 +1,37 @@
-from main import add
-from main import get_the_capital_of_a_country
+from mylib.lib import load_dataset, calculate_summaries
 
 
-def test_add():
+def test_add(dataset):
     """Tewting the add function"""
-    assert add(2, 2) == 4
-    assert add(3, 2) == 5
+    assert dataset is not None
+    assert dataset.shape == (73280, 8)
 
 
-def test_countries():
-    """testing out get_the_capital_of_a_country function"""
-    assert get_the_capital_of_a_country("United States") == "Washington D.C."
-    assert get_the_capital_of_a_country("Ghana") == "Accra"
-    assert get_the_capital_of_a_country("united states") == "Washington D.C."
+def test_countries(dataset):
+    my_calculated_summaries = calculate_summaries(
+        dataset, "population", "Population", "urbanindex", "Urban Index", True
+    )
+    pandas_summaries = dataset.describe()
     assert (
-        get_the_capital_of_a_country("London")
-        == "The country you specified was not found!"
+        pandas_summaries.loc["mean", "population"]
+        == my_calculated_summaries.loc["Mean", "Population"]
+    )
+    assert (
+        pandas_summaries.loc["std", "population"]
+        == my_calculated_summaries.loc["Standard Deviation", "Population"]
+    )
+    assert (
+        pandas_summaries.loc["min", "population"]
+        == my_calculated_summaries.loc["Min", "Population"]
+    )
+    assert (
+        pandas_summaries.loc["max", "population"]
+        == my_calculated_summaries.loc["Max", "Population"]
     )
 
 
 if __name__ == "__main__":
-    test_add()
-    test_countries()
+    dataset = load_dataset()
+    test_add(dataset)
+    test_countries(dataset)
     print("Test completed successfully")
