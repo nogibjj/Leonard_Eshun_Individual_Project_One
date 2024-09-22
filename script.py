@@ -56,7 +56,7 @@ def save_bar_chart(df):
 
 if __name__ == "__main__":
     df = load_dataset(dataset_path)
-    save_bar_chart(df)
     save_histogram(df)
+    save_bar_chart(df)
     """Save markdown"""
     save_to_markdown(df)

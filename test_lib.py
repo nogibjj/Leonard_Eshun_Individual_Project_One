@@ -50,8 +50,9 @@ def test_file_creation(cleanup=True):
     assert not os.path.exists("population_bar.png")
     assert not os.path.exists("population_histogram.png")
 
-    save_bar_chart(dataset)
+    # Interestingly calling the bar chart first makes the histogram save a barchart
     save_histogram(dataset)
+    save_bar_chart(dataset)
 
     assert os.path.exists("population_bar.png")
     assert os.path.exists("population_histogram.png")
@@ -67,5 +68,5 @@ def test_file_creation(cleanup=True):
 if __name__ == "__main__":
     dataset = test_data_loading()
     test_summaries()
-    test_file_creation(True)
+    test_file_creation(False)
     print("Test completed successfully")
