@@ -11,10 +11,11 @@ def test_data_loading():
     dataset = load_dataset(dataset_path)
     assert dataset is not None
     assert dataset.shape == (73280, 8)
-    return dataset
 
 
-def test_summaries(dataset):
+def test_summaries():
+    # Bringing it into the function because pytest doesn't find it when it comes in as a parameter
+    dataset = load_dataset(dataset_path)
     my_calculated_summaries = calculate_summaries(
         dataset, "population", "Population", "urbanindex", "Urban Index", True
     )
@@ -37,7 +38,8 @@ def test_summaries(dataset):
     )
 
 
-def test_file_creation(data, cleanup=True):
+def test_file_creation(cleanup=True):
+    dataset = load_dataset(dataset_path)
     # Remove existing ones
     if os.path.exists("population_bar.png"):
         os.remove("population_bar.png")
@@ -48,8 +50,8 @@ def test_file_creation(data, cleanup=True):
     assert not os.path.exists("population_bar.png")
     assert not os.path.exists("population_histogram.png")
 
-    save_bar_chart(data)
-    save_histogram(data)
+    save_bar_chart(dataset)
+    save_histogram(dataset)
 
     assert os.path.exists("population_bar.png")
     assert os.path.exists("population_histogram.png")
@@ -64,6 +66,6 @@ def test_file_creation(data, cleanup=True):
 
 if __name__ == "__main__":
     dataset = test_data_loading()
-    test_summaries(dataset)
-    test_file_creation(dataset)
+    test_summaries()
+    test_file_creation(False)
     print("Test completed successfully")
