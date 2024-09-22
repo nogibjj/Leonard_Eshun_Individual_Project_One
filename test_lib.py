@@ -45,14 +45,14 @@ def test_file_creation(data, cleanup=True):
         os.remove("population_histogram.png")
 
     # Test and create new ones
-    assert os.path.exists("population_bar.png") == False
-    assert os.path.exists("population_histogram.png") == False
+    assert not os.path.exists("population_bar.png")
+    assert not os.path.exists("population_histogram.png")
 
     save_bar_chart(data)
     save_histogram(data)
 
-    assert os.path.exists("population_bar.png") == True
-    assert os.path.exists("population_histogram.png") == True
+    assert os.path.exists("population_bar.png")
+    assert os.path.exists("population_histogram.png")
 
     # Clean up
     if cleanup:
