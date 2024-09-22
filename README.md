@@ -61,12 +61,29 @@ It has the following functions:
 	save_to_markdown(data)
 	```
 
-> [!TIP]
-> Just clone the repository to your local machine or codespace and enjoy.
 
 ## Descriptive Statistics and Visualization
 The descriptive statistics were done with Pandas and the Visualization done with matplotlib.
 
+## Here are some of the results of the descriptive statistics
+
+### _Population Summaries:_
+|    | Statistic          |   Population |   Urban Index |
+|---:|:-------------------|-------------:|--------------:|
+|  0 | Count              |     73280    |  73280        |
+|  1 | Mean               |      4426.17 |     11.042    |
+|  2 | Median             |      4126    |     11.6169   |
+|  3 | Max                |     65528    |     14.9972   |
+|  4 | Min                |         2    |     -0.297768 |
+|  5 | Standard Deviation |      2198.08 |      2.08191  |
+
+### _Population Histogram_
+
+![population_histogram](population_histogram.png)
+
+### _Population Bar Chart_
+
+![population_bar](population_bar.png)
 
 ## Steps taken to meet the requirements
 The code was pushed to Github and Github Actions did the following main things:
