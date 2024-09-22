@@ -10,6 +10,9 @@ This repository is created to fulfill two assignments from the Data Engineering 
 1. has a Pandas Descriptive Statistics Script.
 1. does Continuous Integration using Github Actions of Python Data Science
 
+The data used is the Urbanization Census from Five Thirty Eight. This can be found at:    
+[Link to data used for this project]("https://raw.githubusercontent.com/fivethirtyeight/data/master/urbanization-index/urbanization-census-tract.csv")
+
 The requirements for assignment one are:
 1. Python script using Pandas for descriptive statistics
 1. Read a dataset (CSV or Excel)
@@ -30,6 +33,11 @@ The requirements for assignment two are:
 	1. test_lib.py to test library
 	1. Pinned requirements.txt
 1. Github Actions performs all four Makefile commands with badges for each one in the README.md
+
+## A video describing the code can be found here
+<video width="320" height="240" controls>
+  <source src="https://www.youtube.com/watch?v=UZ6fGdxjP1U&t=6s" type="video/mp4">
+</video>
 
 ## This is what the python code does
 It has the following functions:
