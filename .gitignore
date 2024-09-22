@@ -3,7 +3,4 @@ mylib/__pycache__/
 actions
 .pytest_cache
 .DS_Store
-# population_summary.md
-# population_bar.png
-# population_histogram.png
 .ruff_cache

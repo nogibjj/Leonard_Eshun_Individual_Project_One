@@ -67,5 +67,5 @@ def test_file_creation(cleanup=True):
 if __name__ == "__main__":
     dataset = test_data_loading()
     test_summaries()
-    test_file_creation(False)
+    test_file_creation(True)
     print("Test completed successfully")
