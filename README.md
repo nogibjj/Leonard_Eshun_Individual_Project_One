@@ -34,10 +34,8 @@ The requirements for assignment two are:
 	1. Pinned requirements.txt
 1. Github Actions performs all four Makefile commands with badges for each one in the README.md
 
-## A video describing the code can be found here
-<video width="320" height="240" controls>
-  <source src="https://www.youtube.com/watch?v=UZ6fGdxjP1U&t=6s" type="video/mp4">
-</video>
+>### A video describing the code can be found here
+[![Video describing the work](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DUZ6fGdxjP1U%26t%3D6s)](https://www.youtube.com/watch?v=UZ6fGdxjP1U&t=6s)
 
 ## This is what the python code does
 It has the following functions:
