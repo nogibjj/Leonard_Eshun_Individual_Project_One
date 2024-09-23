@@ -32,10 +32,10 @@ The requirements for assignment two are:
 	1. test_script.py to test script
 	1. test_lib.py to test library
 	1. Pinned requirements.txt
-1. Github Actions performs all four Makefile commands with badges for each one in the README.md
+1. Github Actions performs all four Makefile commands with badges for each one in the README.md  
 
->### A video describing the code can be found here
-[![Video describing the work](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DUZ6fGdxjP1U%26t%3D6s)](https://www.youtube.com/watch?v=UZ6fGdxjP1U&t=6s)
+### A video describing the code can be found here
+[![Video describing my code](https://markdown-videos-api.jorgenkh.no/url?url=https%3A%2F%2Fyoutu.be%2FnNmB1PEayd8)](https://youtu.be/nNmB1PEayd8)
 
 ## This is what the python code does
 It has the following functions:
@@ -44,7 +44,6 @@ It has the following functions:
 	```
 	# Returns a data frame
 	load_dataset()
-	
 	```
 1. **calculate_summaries** to generate the summary statistics
 	```
@@ -76,12 +75,12 @@ The descriptive statistics were done with Pandas and the Visualization done with
 ### _Population Summaries:_
 |    | Statistic          |   Population |   Urban Index |
 |---:|:-------------------|-------------:|--------------:|
-|  0 | Count              |     73280    |  73280        |
-|  1 | Mean               |      4426.17 |     11.042    |
-|  2 | Median             |      4126    |     11.6169   |
-|  3 | Max                |     65528    |     14.9972   |
-|  4 | Min                |         2    |     -0.297768 |
-|  5 | Standard Deviation |      2198.08 |      2.08191  |
+|  1 | Count              |     73280    |  73280        |
+|  2 | Mean               |      4426.17 |     11.042    |
+|  3 | Median             |      4126    |     11.6169   |
+|  4 | Max                |     65528    |     14.9972   |
+|  5 | Min                |         2    |     -0.297768 |
+|  6 | Standard Deviation |      2198.08 |      2.08191  |
 
 ### _Population Histogram_
 
@@ -104,3 +103,6 @@ The code was pushed to Github and Github Actions did the following main things:
 
 > [!NOTE]
 > A markdown file summarizing the information is created during the pipeline runtime using Python. Prior to this the charts are generated in the pipeline runtime and used for visualization together with the descriptive statistics in the generated md file. This is part of the test workflow and occurs as the last job. A push is made by the github action for generation of the files.
+
+### Reference
+To generate a thumbnail and link for video, click [here.](https://markdown-videos.jorgenkh.no)
